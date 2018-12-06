@@ -1,0 +1,5 @@
+Ctrl + ` new terminal in visual studio
+alt + Arrow(left, right)(Go back, forward)   
+ctrl + p (go to file)
+ctrl + shift + k (delete line)
+ctrl + shift + T (open close editor)

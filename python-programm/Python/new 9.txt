@@ -1,0 +1,5 @@
+  host: "ec2-35-153-65-160.compute-1.amazonaws.com",
+        user: "root",
+        port: "3306",
+        password: "MyNewPass",
+        database: "predictivedb"

@@ -1,0 +1,18 @@
+INSERT INTO file_import_summary(project_id,client_id,user_key,file_name,status,file_processing_status,qatm_import_status,is_zip,start_time,file_size,file_validation_status,extraattributes,is_connect_origin,is_wisdom_origin) VALUES(
+								425,57,94,"1513856883317_3d20c534cbbe18ce981b4e1ea897c7ad9ff19b9836022ab180b516ef415db997.xml","In Progress","success","success",false,"2017-07-17 10:21:13",4060,"success","{"format":"junit/xml","testRunName":"Junit Test Run","platform":"IOS"}",false,true,)
+								
+								
+								INSERT INTO file_import_summary( project_id, client_id, user_key, file_name, status, file_processing_status, qatm_import_status, is_zip, start_time, file_size, file_validation_status, is_connect_origin, is_wisdom_origin) VALUES( 425,57,94,'1513856883317_3d20c534cbbe18ce981b4e1ea897c7ad9ff19b9836022ab180b516ef415db997.xml','In Progress','success','success',false,'2017-07-17 10:21:13',4060,'success',false,true);
+								
+								
+								unique_id,detailed_status,tracking_id 6962INSERT INTO file_import_summary( file_name, status, file_processing_status, qatm_import_status, is_zip, start_time, file_size, file_validation_status, is_connect_origin, is_wisdom_origin) VALUES( "1513856883317_3d20c534cbbe18ce981b4e1ea897c7ad9ff19b9836022ab180b516ef415db997.xml","In Progress","success","success",false,"2017-07-17 10:21:13",4060,"success",false,true);
+
+								
+								
+								{"apiKey":"d673f4bf95c5dc4ed5c844c53c66aaeed5374b69f9d04a3ccfa7497e6f3bd57a","format":"junit/xml","testRunName":"Junit Test Run","platform":"IOS","customerId":57,"project":425,"userKey":94,"isValidWisdomLicence":true}
+								
+								
+								
+								
+								
+								s3://qtm-wisdom/uploaded-files-wisdom/1513856883317_3d20c534cbbe18ce981b4e1ea897c7ad9ff19b9836022ab180b516ef415db997.xml
