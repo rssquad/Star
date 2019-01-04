@@ -1,0 +1,20 @@
+{
+    "Radhika":{
+        "id":"radhika.surani@gmail.com",
+        "task":"dev",
+        "duration":"2 month",
+        "description": "This is information "
+    },
+    "ABC":{
+        "id":"abc.xyz@gmail.com",
+        "task":"qa",
+        "duration":"1 month",
+        "description": "This is information "
+    },
+    "DEF":{
+        "id":"def.pqr@gmail.com",
+        "task":"automation",
+        "duration":"1-2 month",
+        "description": "This is information "
+    }
+}
