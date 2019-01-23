@@ -1,49 +1,69 @@
-import java.util.*;
 
-public class HashCode
+import java.io.*; 
+import java.util.*; 
+
+class HashCode
 {
+	
 	public static void main(String[] args)
 	{
-		HashCode hm = new HashCode();
-		hm.test();
-		hm.getKeyCount();
+		Hash h = new Hash("Radhika", 101);
+		Hash h1 = new Hash("Radhika", 101);
+		
+		Map<Hash, String> m = new HashMap<Hash, String>();
+	m.put(h, "Engineer");
+	m.put(h1, "BusinessWomen");
+	
+	for(Hash hash : m.keySet())
+	{
+		System.out.println(m.get(hash).toString());
 	}
 
-	public void test()
-	{
-		HashMap<Integer, String> m = new HashMap<>();
-		m.put(1,"Radhika");
-		m.put(2,"Surani");
-		m.put(3,"Software Engineer");
-
-		System.out.println("This is hashmap iteration ::" + m);
-
-		for(Map.Entry<Integer, String> entry : m.entrySet())
-		{
-			System.out.println("Key is : " + entry.getKey() + " Value is : " + entry.getValue());
-		}
 	}
-
-	public void getKeyCount()
-	{
-		 Integer[] num = new Integer[]{1,2,3,2,1,3,4,1,1,7};
-
-		 HashMap<Integer, Integer> mCount = new HashMap<>();
-
-		for(Integer a : num){
-
-			if(mCount.containsKey(a))
-			{
-				mCount.put(a, mCount.get(a) + 1);
-			}
-			else
-			{
-				mCount.put(a, 1);
-			}
-
-		}
-
-		System.out.println("FILAN COUNT IS " + mCount);
-
+	
+	
 }
+class Hash
+{
+	String name;
+	int id;
+	
+	Hash(String name, int id)
+	{
+		this.name = name;
+		this.id = id;
+	}
+	
+    @Override
+	public boolean equals(Object obj)
+	{
+		if(this == obj)
+		{
+			return true;
+		}
+		
+		if(obj == null || obj.getClass() != this.getClass())
+		{
+			return false;
+		}
+
+		Hash hs = (Hash)obj;
+		
+		return (hs.name.equals(this.name) && hs.id == this.id);
+	}
+	
+	  @Override
+    public int hashCode() 
+    { 
+          
+        // We are returning the Geek_id  
+        // as a hashcode value. 
+        // we can also return some  
+        // other calculated value or may 
+        // be memory address of the  
+        // Object on which it is invoked.  
+        // it depends on how you implement  
+        // hashCode() method. 
+        return this.id ; 
+    } 
 }
