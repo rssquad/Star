@@ -10,12 +10,9 @@ class FileEx
         f.fileReadOp();
     }
 
-
     public void fileReadOp()
-    {      File file;
+    {     File file;
           FileOutputStream fos = null;
-
-
         try{
                  file = new File("D:/myfile.txt");
 	             fos = new FileOutputStream(file);

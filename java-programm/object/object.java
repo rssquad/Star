@@ -17,7 +17,7 @@ public class object extends A
 	{
 		
 	//	object a = new A(); // you can't do this
-	//	A a = new object(); // This object call 'object' class m1 method so o/p is "This is inside B ::"
+	//	A a = new object(); // This object a call 'object' class m1 method so o/p is "This is inside B ::"
 		System.out.println(a.m1());
 	}
 }

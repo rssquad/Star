@@ -15,6 +15,8 @@ class Exception
 			System.out.println("length is : " + a);
 		}catch(NullPointerException ne){
 			System.out.println("IT's NullPointer Exception :");
+		}catch(RuntimeException ne){
+			System.out.println("IT's NullPointer Exception :");
 		}
 	}
 }
