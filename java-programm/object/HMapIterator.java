@@ -16,24 +16,25 @@ public class HMapIterator
 		m.put(2,"Surani");
 		m.put(3,"Software Engineer");
 
-		// System.out.println("This is hashmap iteration ::" + m);
+		// HashMap Iteration using FOREACH LOOP
 
-		// System.out.println(m.keySet());
+		m.forEach((k,v) -> System.out.println(" KEY IS: " + k + " AND VALUE OF IT IS : "+ v));
 
-		// m.forEach((k,v) -> System.out.println(" KEY IS: " + k + " AND VALUE OF IT IS : "+ v));
-
+		// HashMap Iteration using ketSet()  method of map
 		Set<Integer> set = m.keySet();
 		for(int a : set)
 		{
 			System.out.println(m.get(a));
 		}
 
+		// HashMap Iteration using entrySet();
 		for(Map.Entry<Integer, String> entry : m.entrySet())
 		{
-			// System.out.println("Key is : " + entry.getKey() + " Value is : " + entry.getValue());
+			System.out.println("Key is : " + entry.getKey() + " Value is : " + entry.getValue());
 		}
 	}
 
+// Print count of repeate digit 
 	public void getKeyCount()
 	{
 		 Integer[] num = new Integer[]{1,2,3,2,1,3,4,1,1,7};
@@ -56,4 +57,6 @@ public class HMapIterator
 		System.out.println("FINAL COUNT IS " + mCount);
 
 	}
+
+	
 }
