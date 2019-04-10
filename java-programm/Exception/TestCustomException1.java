@@ -10,9 +10,20 @@ class TestCustomException1{
     public static void main(String args[]){  
        try{  
        validate(13);  
-       }catch(Exception m){System.out.println("Exception occured: "+m);}  
+       }catch(Exception m){System.out.println("Exception occured: "+m.getMessage());}  
+      //  validate(13);  
    
        System.out.println("rest of the code...");  
    }  
 
  }  
+
+
+class InvalidAgeException extends Exception
+{
+ public static int serialVersionUID = 878798;
+  InvalidAgeException(String msg)
+  {
+    System.out.println(msg);
+  }
+}
