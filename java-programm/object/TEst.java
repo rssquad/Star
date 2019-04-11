@@ -1,62 +1,72 @@
 import java.io.*; 
-import java.util.*; 
+import java.util.*;
+
+import javax.swing.plaf.basic.BasicScrollPaneUI.ViewportChangeHandler; 
 class TEst
 {
     public static void main(String[] args)
     {
-       /*  Map<Integer, String> m = new HashMap<>();
-        m.put(1,"abc");
-        m.put(2,"def");
-        m.put(3,"xyz");
+       Map<Integer,String> m = new HashMap<>();
+        m.put(101,"test");
+        m.put(102,"hsgfh");
+        m.put(103,"nnn");
+
+        for(Map.Entry<Integer,String> h : m.entrySet())
+        {
+            System.out.println("K : " + h.getKey() + " V : " + h.getValue());
+        }
 
         m.forEach((k,v)->{
-            System.out.println("K : " + k + "V : " + v);
+            System.out.println("K: " + k + " V: " + v);
         });
-
-        for(Map.Entry<Integer,String> entry :  m.entrySet())
-        {
-            System.out.println(" K : " + entry.getKey() + "V : " + entry.getValue());
-        }
 
         for(int a : m.keySet())
         {
-            System.out.println( a +  " " + m.get(a));
-        } */
-
-        DemoTest dt = new DemoTest("Radhika", 5);
-        DemoTest dt1 = new DemoTest("Radhi", 45);
-        DemoTest dt2 = new DemoTest("Raadhi", 9);
-
-        ArrayList<DemoTest> m = new ArrayList<DemoTest>();
-        m.add(dt);
-        m.add(dt1);
-        m.add(dt2);
-
-        // Collections.sort(m);
-        // for(DemoTest da : m)
-        // {
-        //     System.out.println("Name : " + da.getName() + " Id : " + da.getId());
-        // }
-        oderedByName od = new oderedByName();
-        Collections.sort(m,od);
-        for(DemoTest t : m)
-        {
-            System.out.println("Name : " + t.getName() + " Id : " + t.getId());
+            System.out.println("K : " + a + " V :" + m.get(a));
         }
 
+        List<Ddemo> l = new ArrayList<>();
+        Ddemo d = new Ddemo();
+        l.add(new Ddemo("kaic", 101, 193));
+        l.add(new Ddemo("kaip", 102, 65));
+        l.add(new Ddemo("kain", 103, 96));
+
+        Collections.sort(l,d);
+        for(Ddemo a : l)
+        {
+            System.out.println("List : " + a.getName() + " " + a.getEId() + " " + a.getId());
+        }
+
+
+        hashCodeEx hc = new hashCodeEx();
+        hc.HashCodeANdEuals();
+
+
+
     }
-    
+      
 }
 
-class DemoTest implements Comparable<DemoTest>
+
+class Ddemo implements Comparator<Ddemo>
 {
     String name;
     int id;
-
-    public DemoTest(String name, int id)
+    int eId;
+    public Ddemo()
     {
-        this.name  = name;
+        
+    }
+
+    public Ddemo(String name, int eId, int id)
+    {
+        this.name = name;
+        this.eId = eId;
         this.id = id;
+    }
+    public void set(String name)
+    {
+        this.name = name;
     }
 
     public String getName()
@@ -64,37 +74,102 @@ class DemoTest implements Comparable<DemoTest>
         return this.name;
     }
 
-    public void setName(String name)
+    public void setId(int id)
     {
-    this.name = name;
+        this.id  =id;
     }
 
     public int getId()
     {
-        return  this.id;
+        return this.id;
     }
-
-    public void setId(int id)
+    public void setEId(int eId)
     {
-        this.id = id;
+        this.eId = eId;
+    }
+    public int getEId()
+    {
+        return this.eId;
     }
 
-        public String toString()
-        {
-            return "Name is : " + this.name + "and his/her id is : " + this.id;
+    public int compare(Ddemo d1, Ddemo d2)
+    {
+        return d1.getName().compareTo(d2.getName());
+    }
 
-        }
-
-        public int compareTo(DemoTest dt)
-        {
-          return dt.id - this.id;
-        }
 }
 
-class oderedByName implements Comparator<DemoTest>
-{
-    public int compare(DemoTest dt, DemoTest dt1)
+class hashCodeEx{
+
+   String name;
+   int testId;
+   public void setName(String name)
+   {
+       this.name = name;
+   }
+   public String getName()
+   {
+       return this.name;
+   }
+   public void setTestId(int testId)
+   {
+       this.testId = testId;
+   }
+   public int getTestId()
+   {
+       return this.testId;
+   }
+    
+   public hashCodeEx(int testId, String name)
+   {
+        this.name = name;
+        this.testId = testId;
+   }
+   public hashCodeEx()
+   {
+        
+   }
+    public void HashCodeANdEuals()
     {
-            return dt.getName().compareTo(dt1.getName());
+        
+        Map<hashCodeEx, String> m =new HashMap<>();
+        hashCodeEx h1  =  new hashCodeEx(101,"radhika");
+        hashCodeEx h2 =  new hashCodeEx(101,"radhika");
+        hashCodeEx h3 = new hashCodeEx(104,"raaaadhika");
+        hashCodeEx h4= new hashCodeEx(1018,"raadhika");
+
+        m.put(h1,"radhika");
+        m.put(h2,"surani");
+        m.put(h3,"Software Engineer");
+        m.put(h4,"BusinessWoman");
+
+        m.forEach((k,v)->{
+            System.out.println("k " + k.getName()  +  " v " +v);
+        });
+
+
     }
+
+    public int hashCode()
+    {
+        return this.testId;
+    }
+     
+    // public boolean equals(Object obj)
+    // {
+    //     if(this == obj)
+    //     {
+    //         return true;
+    //     }else if(obj == null || obj.getClass() != this.getClass())
+    //     {
+    //         return false;
+    //     }
+
+    //     hashCodeEx hs = (hashCodeEx)obj;
+    //     return this.name.equals(hs.name) && this.testId == hs.testId;
+    // }
+        
+
+
+
 }
