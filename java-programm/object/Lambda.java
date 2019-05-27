@@ -6,7 +6,7 @@ class Lambda
         System.out.println("HELLOW");
     } // This function implementation using Lambda expression below
 
-    () -> { System.out.println("Hellloww.. !! Using Lambda"); }
+    // () -> { System.out.println("Hellloww.. !! Using Lambda"); }
 
 
     // Ex. 2
@@ -16,7 +16,7 @@ class Lambda
         System.out.println(a + b);
     }// This function implementation using Lambda expression below
 
-    (int a, int b) -> {System.out.println(a+b);}
+    // (int a, int b) -> {System.out.println(a+b);}
 
     // Ex. 3
     public int squareIt(int n)
@@ -24,7 +24,7 @@ class Lambda
        return n*n;
     }// This function implementation using Lambda expression below
 
-    (n) -> {return n*n;}  OR IT Could be (n) -> n*n;
+    // (n) -> {return n*n;}  OR IT Could be (n) -> n*n;
 
     // EX. 4
 
@@ -33,5 +33,5 @@ class Lambda
         return s.length();
     }// This function implementation using Lambda expression below
 
-    (String s) - > s.length();
+    // (String s) - > s.length();
 }

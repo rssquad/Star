@@ -3,6 +3,7 @@ class SingletonDesign {
 
         // singletonImpl ts = singletonImpl.getInstance();
         // ts.testMe("From main");
+        // to prevent copy of object using reflection, throws error from constructor
 
         MyThread t = new MyThread();
         t.start();

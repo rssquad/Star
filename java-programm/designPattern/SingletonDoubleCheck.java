@@ -67,7 +67,6 @@ class singletonImpl {
     {singletonImpl ts1 = singletonImpl.getInstance();
         for(int i = 0; i < 10; i++)
         {
-            
             ts1.testMe("From MyThreadEx2");
         }
     }

@@ -14,7 +14,7 @@ class Streamss
         l.add(63);
         l.add(34);
         l.add(23);
-        // List<Integer> l2 = l.stream().filter(i->i%2==0).collect(Collectors.toList()); // here filter return only true false so when need to update somthin must go for map
+        // List<Integer> l2 = l.stream().filter(i->i%2==0).collect(Collectors.toList()); // here filter return only true false so when need to update somthing must go for map
         // System.out.println(l2);
         List<Integer> l3 = l.stream().map(i->i+5).collect(Collectors.toList()); // suppose you want to add 5 in every number than should go for map
         System.out.println(l3);
